@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <main class="main-form">
+        <div class="steps">
+            <div class="line"></div>
+            <div class="step active" data-id="1">
+                <span class="material-symbols-outlined"> person </span>
+            </div>
+            <div class="step" data-id="2">
+                <span class="material-symbols-outlined">
+                    directions_car
+                </span>
+            </div>
+            <div class="step" data-id="5">
+                <span class="material-symbols-outlined">
+                    edit_document
+                </span>
+            </div>
+            <div class="step" data-id="6">
+                <span class="material-symbols-outlined"> check </span>
+            </div>
+        </div>
+
+        <form id="form">
+            <div class="form-step active">
+                <h1 class="title">
+                    Primeiro vamos <br />falar sobre você.
+                </h1>
+                <div class="input-container">
+                    <span class="material-symbols-outlined"> person </span>
+                    <input type="text" id="name" autocomplete="name" class="input-field" required placeholder="" />
+                    <label for="name" class="input-label">Nome</label>
+                </div>
+                <div class="input-container">
+                    <span class="material-symbols-outlined"> call </span>
+                    <input type="text" id="cellphone" class="input-field" required placeholder="" maxlength="15" />
+                    <label for="cellphone" class="input-label">Celular com (DDD)</label>
+                </div>
+                <div class="input-container">
+                    <span class="material-symbols-outlined">
+                        view_week
+                    </span>
+                    <input type="text" id="sign" class="input-field" required placeholder="" />
+                    <label for="sign" class="input-label">Qual a placa do seu veículo?</label>
+                </div>
+                <div class="check-container">
+                    <input type="checkbox" id="terms" class="check-field" />
+                    <p>
+                        Estou de acordo com os
+                        <a href="#">Termos de Uso e Privacidade</a>
+                    </p>
+                </div>
+                <button type="button" class="submit-button next-button" disabled data-require="name cellphone sign">
+                    Continuar
+                </button>
+            </div>
+
+            <div class="form-step">
+                <h1 class="title">
+                    Agora, vamos falar <br />sobre seu carro.
+                </h1>
+                <div class="input-container">
+                    <input type="text" id="sign-2" class="input-field" required placeholder="" />
+                    <label for="sign-2" class="input-label">Qual a placa do seu veículo?</label>
+                </div>
+                <p class="form-message">
+                    Não sabe a placa ou veículo 0km?
+                    <a href="#">Clique Aqui!</a>
+                </p>
+                <button type="button" class="button-select-car">
+                    <span class="label-button">Selecione o modelo:</span>
+                    <div class="model-button">
+                        <span>Modelo do Carro</span>
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                </button>
+                <div class="informations">
+                    <span class="info">Fipe Coberta</span>
+                    <div class="value">R$ 99.999,00</div>
+                </div>
+                <button type="button" class="submit-button next-button" data-require="sign-2">
+                    Continuar
+                </button>
+            </div>
+
+            <div class="form-step">
+                <h1 class="title">
+                    Agora, vamos falar <br />sobre seu carro.
+                </h1>
+
+                <h2 class="subtitle">Motivos de uso do seu carro</h2>
+
+                <div class="checkboxes">
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a1" />
+                        Apenas para passeio
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a2" />
+                        Uso pessoal do dia a dia
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a3" />
+                        Sou motorista de app ou taxista
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a4" />
+                        Uso para transporte de cargas e frete
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a5" />
+                        Uso para ida e volta ao trabalho
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a6" />
+                        Visita de clientes ou fornecedores
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a7" />
+                        Uso para ir a faculdade ou curso
+                    </label>
+                    <label class="check-container">
+                        <input type="checkbox" class="check-field" id="a8" />
+                        Outros usos a trabalho
+                    </label>
+                </div>
+
+                <button type="button" class="submit-button next-button" hidden>
+                    Continuar
+                </button>
+            </div>
+
+            <div class="form-step">
+                <h1 class="title">
+                    Agora, vamos falar <br />sobre seu carro.
+                </h1>
+
+                <div class="question">
+                    <h2 class="subtitle">
+                        Você já teve algum veículo Roubado ou Furtado
+                        anteriormente?
+                    </h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" id="q1s" name="q1" />
+                            Sim
+                        </label>
+                        <label>
+                            <input type="radio" id="q1n" name="q1" />
+                            Não
+                        </label>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="question">
+                    <h2 class="subtitle">
+                        Já teve algum seguro nos últimos 30 dias?
+                    </h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" id="q2s" name="q2" />
+                            Sim<span class="insurance-type"></span>
+                        </label>
+                        <label>
+                            <input type="radio" id="q2n" name="q2" />
+                            Não
+                        </label>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="question">
+                    <h2 class="subtitle">O veículo é blindado?</h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" id="q3s" name="q3" />
+                            Sim
+                        </label>
+                        <label>
+                            <input type="radio" id="q3n" name="q3" />
+                            Não
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="submit-button next-button" data-questions="1 2 3" id="question-button"
+                    hidden>
+                    Continuar
+                </button>
+            </div>
+
+            <div class="form-step">
+                <h1 class="title">
+                    Agora, alguns detalhes <br />sobre o condutor principal.
+                </h1>
+
+                <div class="input-container">
+                    <input type="text" id="cpf" class="input-field" required placeholder="" maxlength="14" />
+                    <label for="cpf" class="input-label">CPF do Condutor Principal</label>
+                </div>
+
+                <label class="check-container" style="margin-top: 0">
+                    <input type="checkbox" class="check-field" id="legal-person" />
+                    Sou pessoa jurídica
+                </label>
+
+                <div class="input-container" style="display: none">
+                    <input type="text" id="cnpj" class="input-field" placeholder="" />
+                    <label for="cnpj" class="input-label">CNPJ</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" id="social-name" class="input-field" placeholder="" />
+                    <label for="social-name" class="input-label">Nome Social (Opcional)</label>
+                </div>
+
+                <hr class="hr-condutor" />
+
+                <h2 class="subtitle">
+                    Me informe o CEP onde o seu veículo pernoita
+                </h2>
+
+                <div class="input-container">
+                    <input type="text" id="cep" class="input-field" required placeholder="" />
+                    <label for="cep" class="input-label">CEP ou Endereço</label>
+                </div>
+
+                <div class="question">
+                    <h2 class="subtitle">
+                        Veículo fica em garagem / estacionamento todos os
+                        dias?
+                    </h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" id="q4s" name="q4" />
+                            Sim
+                        </label>
+                        <label>
+                            <input type="radio" id="q4n" name="q4" />
+                            Não
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Deixar o botão escondido até selecionar todos -->
+                <button type="button" class="submit-button next-button" data-require="cpf cep" data-questions="4">
+                    Continuar
+                </button>
+            </div>
+
+            <div class="form-step">
+                <h1 class="title">Por último, <br />seu e-mail.</h1>
+
+                <div class="input-container">
+                    <span class="material-symbols-outlined"> mail </span>
+                    <input type="email" id="email" autocomplete="email" class="input-field" required placeholder="" />
+                    <label for="email" class="input-label">E-mail</label>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Continuar
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <dialog class="dialog-question">
+        <h2 class="subtitle">Qual a classe de bônus?</h2>
+        <hr />
+        <form class="dialog-form">
+            <div class="answers">
+                <label>
+                    <input type="radio" id="q51" name="q5" checked />
+                    1
+                </label>
+                <label>
+                    <input type="radio" id="q52" name="q5" />
+                    2
+                </label>
+                <label>
+                    <input type="radio" id="q53" name="q5" />
+                    3
+                </label>
+                <label>
+                    <input type="radio" id="q54" name="q5" />
+                    4
+                </label>
+                <label>
+                    <input type="radio" id="q55" name="q5" />
+                    5
+                </label>
+                <label>
+                    <input type="radio" id="q56" name="q5" />
+                    6
+                </label>
+                <label>
+                    <input type="radio" id="q57" name="q5" />
+                    7
+                </label>
+                <label>
+                    <input type="radio" id="q58" name="q5" />
+                    8
+                </label>
+                <label>
+                    <input type="radio" id="q59" name="q5" />
+                    9
+                </label>
+                <label>
+                    <input type="radio" id="q510" name="q5" />
+                    10
+                </label>
+            </div>
+            <hr />
+            <div class="buttons">
+                <button class="cancel">
+                    <span class="material-symbols-outlined"> close </span>
+                </button>
+                <button type="submit" class="send">
+                    <span class="material-symbols-outlined"> send </span>
+                </button>
+            </div>
+        </form>
+    </dialog>
+</body>
+
+</html>
